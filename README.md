@@ -1,2 +1,5 @@
-This is a module dump of all my roblox modules.
-Each module should have a description on what it does
+# JKbings0099 OSS
+
+Hello and welcome to my open-soruce roblxo scripts. 
+
+- I made these scripts or modified existing scripts or just stolen them lol (I put in credits I believe tho)
