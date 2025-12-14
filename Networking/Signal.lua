@@ -9,18 +9,29 @@ export type Signal<T...> = {
 	Connect: (self: Signal<T...>, callback: (T...) -> ()) -> Connection,
 	Fire: (self: Signal<T...>, T...) -> (),
 	Destroy: (self: Signal<T...>) -> (),
+	_name: string,
 	_connections: { (T...) -> () },
 	_isDestroyed: boolean,
 }
 
 local Signal = {}
 Signal.__index = Signal
+Signal.__registry = {}
 
-function Signal.new<T...>() : Signal<T...>
+function Signal.new<T...>(signalName: string?) : Signal<T...>
+	assert(type(signalName) == "string", "Signal name must be a string.")
+	
+	if Signal.__registry[signalName] then
+		return Signal.__registry[signalName]
+	end
+	
 	local self = setmetatable({} :: {any}, Signal)
 	
+	self._name= signalName
 	self._connections = {}
 	self._isDestroyed = false
+	
+	Signal.__registry[signalName] = self
 	
 	return self :: Signal<T...>
 end
