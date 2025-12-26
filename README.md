@@ -1,14 +1,6 @@
-# JKbings0099 Open Source Scripts
+# OSS (Opensource Scripts)
 
-Welcome to my collection of open-source Roblox scripts!
+This is my collection of scripts that are open source
 
-This repository contains scripts that I’ve either:
-
-* Written from scratch
-* Modified from existing work
-* Borrowed and improved upon (with credit given where due)
-
-Feel free to explore, learn, and use whatever you find helpful.
-If you spot any bugs or want to contribute, don’t hesitate to open a pull request or drop an issue!
-
-> **Disclaimer:** Some scripts may be experimental or just for fun. Use at your own risk!
+* Not all the scripts are made by me!
+* I do not claim ownership of any of these scripts.
