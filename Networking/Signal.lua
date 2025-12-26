@@ -1,7 +1,3 @@
---[[
-  This is a custom signal module that I made in my free time.
-]]--
-
 export type Connection = {
 	Disconnect: (self: Connection) -> ()
 }
@@ -18,6 +14,11 @@ local Signal = {}
 Signal.__index = Signal
 Signal.__registry = {}
 
+--[[
+	Signal can only be used
+	Client -> Client
+	Server -> Server
+]]
 function Signal.new<T...>(signalName: string?) : Signal<T...>
 	assert(type(signalName) == "string", "Signal name must be a string.")
 	
